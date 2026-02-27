@@ -1,0 +1,7 @@
+{
+  "name": "PetFinder Mobile",
+  "description": "App para adoção de pets com foco em busca local.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
