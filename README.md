@@ -1,20 +1,42 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# PetFinder Mobile
 
-# Run and deploy your AI Studio app
+## Project Overview
+PetFinder Mobile is a modern, mobile-first application designed to facilitate pet adoption. Developed with React Native and Expo, it allows users to browse available pets, find local shelters, and post new pets for adoption. The application features a clean, interactive UI (Clean UI) with an Emerald/Slate color palette and extremely rounded corners.
 
-This contains everything you need to run your app locally.
+## Tech Stack
+- **Framework:** React Native 0.76 (via Expo 52)
+- **Language:** TypeScript
+- **Styling:** React Native StyleSheet (Tailwind-inspired design)
+- **Icons:** Lucide React Native
+- **Persistence:** AsyncStorage
 
-View your app in AI Studio: https://ai.studio/apps/drive/1_zvdxsh3q3B0MMmNte1Ek5PjD0fGGJja
+## Getting Started
 
-## Run Locally
+### Prerequisites
+- Node.js installed on your system.
+- Expo Go app on your mobile device (optional, for physical testing).
 
-**Prerequisites:**  Node.js
+### Installation
+1. Clone the repository and navigate to the project directory.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Running the Project
+- **Start Expo Development Server:**
+  ```bash
+  npm start
+  ```
+- **Run on Android:**
+  ```bash
+  npm run android
+  ```
+- **Run on iOS:**
+  ```bash
+  npm run ios
+  ```
+- **Run on Web (Expo Web):**
+  ```bash
+  npm run web
+  ```
