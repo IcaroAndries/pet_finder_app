@@ -1,10 +1,9 @@
-
-import React from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
-import { MapPin, Mail, Settings as SettingsIcon } from 'lucide-react-native';
-import { Header } from '../layout/Header';
-import { Card } from '../components/UI';
-import { UserProfile } from '../../domain/types';
+import { Mail, MapPin, Settings as SettingsIcon } from "lucide-react-native";
+import React from "react";
+import { Image, StyleSheet, Text, View } from "react-native";
+import { UserProfile } from "../../domain/types";
+import { Card } from "../components/UI";
+import { Header } from "../layout/Header";
 
 interface ProfileViewProps {
   user: UserProfile;
@@ -13,11 +12,11 @@ interface ProfileViewProps {
   onNavigateToSettings: () => void;
 }
 
-export const ProfileView: React.FC<ProfileViewProps> = ({ 
-  user, 
-  onMenu, 
-  onNavigateToMyPosts, 
-  onNavigateToSettings 
+export const ProfileView: React.FC<ProfileViewProps> = ({
+  user,
+  onMenu,
+  onNavigateToMyPosts,
+  onNavigateToSettings,
 }) => (
   <View style={styles.container}>
     <Header title="Meu" subtitle="Perfil" onMenu={onMenu} />
@@ -52,18 +51,40 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  profileHeader: { alignItems: 'center', gap: 12, marginVertical: 24 },
-  avatar: { width: 120, height: 120, borderRadius: 60, borderSize: 4, borderColor: '#f0fdf4' },
-  profileName: { fontSize: 24, fontWeight: '800', color: '#0f172a' },
-  profileLoc: { flexDirection: 'row', alignItems: 'center', gap: 6 },
-  profileLocText: { color: '#94a3b8', fontWeight: '600' },
-  statsRow: { flexDirection: 'row', gap: 16, marginBottom: 24 },
-  statCard: { flex: 1, alignItems: 'center', padding: 20, backgroundColor: '#f0fdf4', borderColor: '#dcfce7' },
-  statValue: { fontSize: 24, fontWeight: '900', color: '#047857' },
-  statLabel: { fontSize: 10, fontWeight: '800', color: '#059669', marginTop: 4 },
-  bioCard: { backgroundColor: '#f8fafc', padding: 24 },
-  bioHeader: { flexDirection: 'row', alignItems: 'center', gap: 10 },
-  bioEmail: { fontWeight: '700', color: '#0f172a' },
-  divider: { height: 1, backgroundColor: '#e2e8f0', marginVertical: 16, opacity: 0.5 },
-  bioText: { color: '#475569', fontSize: 14, lineHeight: 22 },
+  profileHeader: { alignItems: "center", gap: 12, marginVertical: 24 },
+  avatar: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    borderWidth: 4,
+    borderColor: "#f0fdf4",
+  },
+  profileName: { fontSize: 24, fontWeight: "800", color: "#0f172a" },
+  profileLoc: { flexDirection: "row", alignItems: "center", gap: 6 },
+  profileLocText: { color: "#94a3b8", fontWeight: "600" },
+  statsRow: { flexDirection: "row", gap: 16, marginBottom: 24 },
+  statCard: {
+    flex: 1,
+    alignItems: "center",
+    padding: 20,
+    backgroundColor: "#f0fdf4",
+    borderColor: "#dcfce7",
+  },
+  statValue: { fontSize: 24, fontWeight: "900", color: "#047857" },
+  statLabel: {
+    fontSize: 10,
+    fontWeight: "800",
+    color: "#059669",
+    marginTop: 4,
+  },
+  bioCard: { backgroundColor: "#f8fafc", padding: 24 },
+  bioHeader: { flexDirection: "row", alignItems: "center", gap: 10 },
+  bioEmail: { fontWeight: "700", color: "#0f172a" },
+  divider: {
+    height: 1,
+    backgroundColor: "#e2e8f0",
+    marginVertical: 16,
+    opacity: 0.5,
+  },
+  bioText: { color: "#475569", fontSize: 14, lineHeight: 22 },
 });
